@@ -4,33 +4,38 @@
 C4Context
 title System Context diagram for Internet Banking System
 
-Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
-Person(customerB, "Banking Customer B")
-Person_Ext(customerC, "Banking Customer C")
-System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+Person(Administer, "Administer", "Administer of frontend")
+Person_Ext(Audio, "Audio")
 
-Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+System(Unity, "Unity Frontend", "Control character and background")
+System(Rtmp, "Rtmp server", "Receives stream from Unity, and give out to stream platform")
+Boundary(b1, "Stream platform", ""){
+  System(SystemCC, "Stream platform website")
+  System(SystemDD, "Stream platform api")
+}
 
-Enterprise_Boundary(b1, "BankBoundary") {
+BiRel(Administer, Unity, "Administer")
 
-  SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+Rel(Unity, Rtmp, "Render streaming")
 
-  System_Boundary(b2, "BankBoundary2") {
-    System(SystemA, "Banking System A")
-    System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts.")
-  }
+Rel(SystemCC, Audio, "Stream")
 
-  System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
-  SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+Boundary(b2, "AI") {
 
-  Boundary(b3, "BankBoundary3", "boundary") {
-    SystemQueue(SystemF, "Banking System F Queue", "A system of the bank, with personal bank accounts.")
-    SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+  System_Ext(SystemE, "ChatGPT api", "make reaction to chats")
+
+  System_Boundary(b3, "GPU required") {
+    System(SystemF, "Text to voice")
+    System(SystemG, "Voice to face")
+    System(SystemH, "Voice to pose")
   }
 }
 
-BiRel(customerA, SystemAA, "Uses")
-BiRel(SystemAA, SystemE, "Uses")
-Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
-Rel(SystemC, customerA, "Sends e-mails to")
+
+Rel(SystemDD, SystemE, "Chats message")
+Rel(SystemE, SystemF, "Response")
+Rel(SystemE, SystemG, "Response")
+
+Rel(SystemF, Unity, "Face control")
+Rel(SystemG, Unity, "Pose control")
 ```
