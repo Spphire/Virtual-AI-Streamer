@@ -17,6 +17,7 @@ Boundary(b1, "Stream platform", ""){
 }
 
 BiRel(Administer, Unity, "Administer")
+UpdateRelStyle(Administer, Unity, $offsetY="-40")
 
 Rel(Unity, Rtmp, "Render streaming")
 
