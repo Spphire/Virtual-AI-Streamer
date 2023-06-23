@@ -20,6 +20,7 @@ BiRel(Administer, Unity, "Administer")
 UpdateRelStyle(Administer, Unity, $offsetX="-30")
 
 Rel(Unity, Rtmp, "Render streaming")
+UpdateRelStyle(Unity, Rtmp, $offsetX="-30")
 
 Rel(Rtmp, SystemCC, "Stream")
 
