@@ -2,7 +2,7 @@
 
 ```mermaid
 C4Context
-Virtual AI Streamer
+title Virtual AI Streamer
 
 Person(Administer, "Administer", "Administer of frontend")
 
