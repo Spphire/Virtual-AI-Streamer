@@ -23,7 +23,7 @@ Rel(Unity, Rtmp, "Render streaming")
 UpdateRelStyle(Unity, Rtmp, $offsetX="-50")
 
 Rel(Rtmp, SystemCC, "Stream")
-UpdateRelStyle(Rtmp, SystemCC, $offsetX="100", $offsetY="-70")
+UpdateRelStyle(Rtmp, SystemCC, $offsetX="150", $offsetY="-70")
 
 Rel(SystemCC, Audio, "Stream")
 UpdateRelStyle(SystemCC, Audio, $offsetY="-50")
@@ -49,6 +49,7 @@ UpdateRelStyle(SystemF, Rtmp, $offsetX="50", $offsetY="-150")
 
 Rel(SystemF, SystemG, "Get face")
 Rel(SystemF, SystemH, "Get pose")
+UpdateRelStyle(SystemF, SystemH, $offsetY="100")
 
 Rel(SystemG, Unity, "Face control")
 UpdateRelStyle(SystemG, Unity, $offsetX="-20", $offsetY="-300")
