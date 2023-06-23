@@ -12,7 +12,7 @@ System(Rtmp, "Rtmp server", "Receives stream from Unity, and give out to stream 
 
 Person_Ext(Audio, "Audio")
 Boundary(b1, "Stream platform", ""){
-  System(SystemCC, "Stream platform website")
+  System_Ext(SystemCC, "Stream platform website")
   System(SystemDD, "Stream platform api")
 }
 
