@@ -2,7 +2,7 @@
 
 ```mermaid
 C4Context
-title System Context diagram for Internet Banking System
+Virtual AI Streamer
 
 Person(Administer, "Administer", "Administer of frontend")
 
