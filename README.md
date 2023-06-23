@@ -23,7 +23,7 @@ Rel(Unity, Rtmp, "Render streaming")
 UpdateRelStyle(Unity, Rtmp, $offsetX="-50")
 
 Rel(Rtmp, SystemCC, "Stream")
-UpdateRelStyle(Rtmp, SystemCC, $offsetX="90", $offsetY="-70")
+UpdateRelStyle(Rtmp, SystemCC, $offsetX="100", $offsetY="-70")
 
 Rel(SystemCC, Audio, "Stream")
 UpdateRelStyle(SystemCC, Audio, $offsetY="-50")
@@ -43,6 +43,7 @@ Boundary(b2, "AI") {
 Rel(SystemDD, SystemE, "Chats message")
 Rel(SystemE, SystemF, "Get voice")
 Rel(SystemF, Rtmp, "Respose")
+UpdateRelStyle(SystemF, Rtmp, $offsetX="100", $offsetY="-70")
 Rel(SystemF, SystemG, "Get face")
 Rel(SystemF, SystemH, "Get pose")
 
