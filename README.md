@@ -25,6 +25,7 @@ UpdateRelStyle(Unity, Rtmp, $offsetX="-50")
 Rel(Rtmp, SystemCC, "Stream")
 
 Rel(SystemCC, Audio, "Stream")
+UpdateRelStyle(SystemCC, Audio, $offsetY="-50")
 
 Boundary(b2, "AI") {
 
