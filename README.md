@@ -23,7 +23,7 @@ Rel(Unity, Rtmp, "Render streaming")
 UpdateRelStyle(Unity, Rtmp, $offsetX="-50")
 
 Rel(Rtmp, SystemCC, "Stream")
-UpdateRelStyle(Rtmp, SystemCC, $offsetX="70", $offsetY="-70")
+UpdateRelStyle(Rtmp, SystemCC, $offsetX="90", $offsetY="-70")
 
 Rel(SystemCC, Audio, "Stream")
 UpdateRelStyle(SystemCC, Audio, $offsetY="-50")
