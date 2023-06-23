@@ -51,5 +51,7 @@ Rel(SystemF, SystemG, "Get face")
 Rel(SystemF, SystemH, "Get pose")
 
 Rel(SystemG, Unity, "Face control")
+UpdateRelStyle(SystemG, Unity, $offsetX="-50", $offsetY="-250")
 Rel(SystemH, Unity, "Pose control")
+UpdateRelStyle(SystemH, Unity, $offsetX="-50", $offsetY="-300")
 ```
