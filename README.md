@@ -28,7 +28,7 @@ Boundary(b2, "AI") {
 
   System_Ext(SystemE, "ChatGPT api", "make reaction to chats")
 
-  System_Boundary(b3, "GPU required") {
+  Boundary(b3, "GPU required") {
     System(SystemF, "Text to voice")
     System(SystemG, "Voice to face")
     System(SystemH, "Voice to pose")
