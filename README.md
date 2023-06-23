@@ -43,7 +43,7 @@ Boundary(b2, "AI") {
 Rel(SystemDD, SystemE, "Chats message")
 Rel(SystemE, SystemF, "Get voice")
 Rel(SystemF, Rtmp, "Respose")
-UpdateRelStyle(SystemF, Rtmp, $offsetX="100", $offsetY="-70")
+UpdateRelStyle(SystemF, Rtmp, $offsetX="50", $offsetY="-150")
 Rel(SystemF, SystemG, "Get face")
 Rel(SystemF, SystemH, "Get pose")
 
